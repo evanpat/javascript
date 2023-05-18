@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "jquery": "^3.6.4",
     "node": "^19.8.1",
     "prompt-sync": "^4.2.0"
   }
