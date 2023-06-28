@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>The Window Object</h1>
+
+    <button id="button" onclick="clicked()">Button</button>
+    <button type="button" onclick="openPopup()">openPopup</button>
+    <button type="button" onclick="resizePopup()">resizePopup</button>
+    <button type="button" onclick="closePopup()">closePopup</button>
+    <button type="button" onclick="back();">Back</button>
+    <button type="button" onclick="getViews();">Get Views Count</button>
+    <button type="button" onclick="close1();">Close</button>
+    <div id="demo"></div>
+
+    <script>
+      var button = document.getElementById("button");
+      button.onclick = () => (window.location.href = "https://www.sitepoint.com/");
+      //document.getElementById("demo").innerHTML = text;
+
+      function getViews() {
+        alert("You've accessed " + history.length + " web pages in this session.");
+      }
+      function back() {
+        window.history.go(-1);
+      }
+      let popup;
+      function openPopup() {
+        popup = window.open(
+          "https://sitepoint.com",
+          "SitePoint",
+          "width=700,height=700,resizable=yes"
+        );
+      }
+      function resizePopup() {
+        if (popup != undefined) {
+        }
+      }
+      function closePopup() {
+        if (popup != undefined) {
+          popup.close();
+        }
+      }
+      function close1() {
+        close();
+      }
+
+      document.getElementById("demo").innerHTML = window.screen.height;
+    </script>
+  </body>
+</html>
