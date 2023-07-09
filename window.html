@@ -2,7 +2,6 @@
 <html>
   <body>
     <h1>The Window Object</h1>
-
     <button id="button" onclick="clicked()">Button</button>
     <button type="button" onclick="openPopup()">openPopup</button>
     <button type="button" onclick="resizePopup()">resizePopup</button>
@@ -14,8 +13,7 @@
 
     <script>
       var button = document.getElementById("button");
-      button.onclick = () => (window.location.href = "https://www.sitepoint.com/");
-      //document.getElementById("demo").innerHTML = text;
+      button.onclick = () => (window.location.href = "https://www.soda.academy/");
 
       function getViews() {
         alert("You've accessed " + history.length + " web pages in this session.");
@@ -44,7 +42,17 @@
         close();
       }
 
-      document.getElementById("demo").innerHTML = window.screen.height;
+      document.getElementById("demo").innerHTML =
+        "Screen: Height" +
+        window.screen.height +
+        " Width: " +
+        window.screen.width +
+        "<br/>" +
+        "Browser: Height" +
+        window.innerHeight +
+        " Width: " +
+        window.innerWidth +
+        "<br/>";
     </script>
   </body>
 </html>
