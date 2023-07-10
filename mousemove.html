@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <div id="output"></div>
+    <div id="output2"></div>
+    <script>
+      let output = document.getElementById("output");
+      let output2 = document.getElementById("output2");
+      let box = document.getElementById("box");
+      window.addEventListener("mousemove", (e) => {
+        let xPos = e.clientX;
+        let yPos = e.clientY;
+        box.style.left = xPos - 50 + "px";
+        box.style.top = yPos - 50 + "px";
+        output.innerHTML = `<div><span>X: </span>${xPos}px</div><div><span>Y: </span>${yPos}px</div>`;
+      });
+
+      window.addEventListener("resize", (e) => {
+        let height = window.innerHeight;
+        let width = window.innerWidth;
+        output2.innerHTML = `<div><span>Height: </span>${height}px</div><div><span>Width: </span>${width}px</div>`;
+      });
+    </script>
+  </body>
+</html>
