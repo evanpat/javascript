@@ -6,11 +6,8 @@ const rl = readline.createInterface({
     output: process.stdout,
 });
 
-
-const ask = function (age) {
+// prompt question
+rl.question('What is your age? ', (age) => {
     console.log('Your age is: ' + age);
     rl.close();
-}
-
-// prompt question
-rl.question('What is your age? ', ask);
+});
