@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <button onclick="onclick1()">Go to Website</button>
+  <button type="button" onclick="openPopup()">openPopup</button>
+  <button type="button" onclick="closePopup()">closePopup</button>
+  <button type="button" onclick="getHistory();">Get History Count</button>
+  <button type="button" onclick="back();">Back</button>
+  <div id="demo"></div>
+  <body>
+    <script>
+      function onclick1() {
+        window.location.href = "https://soda.academy/";
+      }
+
+      let popup;
+      function openPopup() {
+        popup = window.open("https://cnn.com", "SitePoint", "width=700,height=700,resizable=yes");
+      }
+
+      function getHistory() {
+        alert("You've accessed " + history.length + " web pages in this session.");
+      }
+
+      function back() {
+        window.history.go(-1);
+      }
+      document.getElementById("demo").innerHTML =
+        "Screen: Height" +
+        window.screen.height +
+        " Width: " +
+        window.screen.width +
+        "<br/>" +
+        "Browser: Height" +
+        window.innerHeight +
+        " Width: " +
+        window.innerWidth +
+        "<br/>";
+    </script>
+  </body>
+</html>
