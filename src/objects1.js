@@ -1,13 +1,4 @@
-
-
 // javascript - objects vs variables
-
-let a = 1 // variable, object
-
-// variable - 1 thing
-
-// object - 1 thing or more
-
 let person = {
     firstName : "John", 
     lastName : "Chan", 
@@ -15,15 +6,19 @@ let person = {
     isMale: true,
 };
 
+// print out the whole object
 console.log(person)
-// onsole.log(person.firstName)
-// console.log(person.age)
-// console.log(person["firstName"])
-// console.log(person.name)c
+
+// different ways to pirnt out a value inside object
+console.log(person.firstName)
+console.log(person.age)
+console.log(person["firstName"])
+console.log(person.name) // undefined
 
 let prop = "firstName"
-//console.log(person[prop])
+console.log(person[prop])
 
+// using array to pirnt out values in object
 let props = ["firstName", "lastName", "age", "isMale"];
 
 props.forEach(e => {
